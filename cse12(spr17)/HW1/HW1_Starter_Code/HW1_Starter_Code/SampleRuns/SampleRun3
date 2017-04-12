@@ -1,0 +1,119 @@
+-----------------------------------
+Scores -> You: 0, Computer: 0
+-----------------------------------
+**** Your turn starts ****
+
+Your roll - Dice1: 2, Dice2: 5
+
+Your score in this turn: 7
+
+Enter a number: 1 to continue, 2 to stop/hold
+2
+Your total score in this turn: 7
+
+Overall total score for you: 7
+
+-----------------------------------
+Scores -> You: 7, Computer: 0
+-----------------------------------
+**** Computer's turn starts ****
+
+Computer's roll - Dice1: 3, Dice2: 5
+
+Computer's score in this turn: 8
+
+Computer continues
+
+Computer's roll - Dice1: 6, Dice2: 2
+
+Computer's score in this turn: 16
+
+Computer stops
+
+Computer's total score in this turn: 16
+
+Overall total score for computer: 16
+
+-----------------------------------
+Scores -> You: 7, Computer: 16
+-----------------------------------
+**** Your turn starts ****
+
+Your roll - Dice1: 2, Dice2: 1
+
+Your total score in this turn: 0
+
+Overall total score for you: 7
+
+-----------------------------------
+Scores -> You: 7, Computer: 16
+-----------------------------------
+**** Computer's turn starts ****
+
+Computer's roll - Dice1: 3, Dice2: 1
+
+Computer's total score in this turn: 0
+
+Overall total score for computer: 16
+
+-----------------------------------
+Scores -> You: 7, Computer: 16
+-----------------------------------
+**** Your turn starts ****
+
+Your roll - Dice1: 2, Dice2: 2
+
+Your score in this turn: 4
+
+You have to continue
+
+Your roll - Dice1: 2, Dice2: 4
+
+Your score in this turn: 10
+
+Enter a number: 1 to continue, 2 to stop/hold
+2
+Your total score in this turn: 10
+
+Overall total score for you: 17
+
+-----------------------------------
+Scores -> You: 17, Computer: 16
+-----------------------------------
+**** Computer's turn starts ****
+
+Computer's roll - Dice1: 4, Dice2: 4
+
+Computer's score in this turn: 8
+
+Computer has to continue
+
+Computer's roll - Dice1: 2, Dice2: 4
+
+Computer's score in this turn: 14
+
+Computer continues
+
+Computer's roll - Dice1: 2, Dice2: 3
+
+Computer's score in this turn: 19
+
+Computer continues
+
+Computer's roll - Dice1: 3, Dice2: 2
+
+Computer's score in this turn: 24
+
+Computer stops
+
+Computer's total score in this turn: 24
+
+Overall total score for computer: 40
+
+Computer won game this game!
+--> Statics <--
+  Computer won: 100.0%, You won: 0.0%
+
+Do you want to play again? Enter 1 for Yes, 2 for No
+2
+Thank You for playing!

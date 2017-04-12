@@ -1,0 +1,35 @@
+public static void selectionSort(int numbers [], int numbersSize) {
+      int i = 0;
+      int j = 0;
+      int indexSmallest = 0;
+      int temp = 0;  // Temporary variable for swap
+
+
+      // for all the elements in the array
+      for (i = 0; i < numbersSize; ++i) {
+
+         // Find index of 1st element in the unsorted part of array
+         indexSmallest = i;
+
+         // find the rest of the elems in unsorted part & compare with
+         // 1st elem of the unsorted part of array
+         for (j = i + 1; j < numbersSize; ++j) {
+
+            // if any other unsorted elems r smaller, assign the index to indexSmallest
+            if (numbers[j] < numbers[indexSmallest]) {
+               indexSmallest = j;
+            }
+         }
+           
+         // Swap numbers[i] and numbers[indexSmallest]
+         temp = numbers[i];
+         numbers[i] = numbers[indexSmallest];
+         numbers[indexSmallest] = temp;
+      }
+   }
+
+Selection sort algo need approx n times to select smallest element from unsorted part
+
+Selection sort algo takes n-1 comparisons to select the smallest element from unsorted part
+
+selection sort worse/best/average is n^2.

@@ -1,0 +1,55 @@
+SET UP GIT SO THAT IT IS READY TO WORK
+    Setup Name and Email
+SETUP LINE ENDING PREFERENCES
+
+MORE SETUP: GET THE TUTORIAL MATERIALS SETUP AND
+            READY TO RUN.
+    Get the Tutorial package
+    Description of files
+
+GOAL: CREATE A GIT REPO FROM SCRATCH
+    Create a "Hello, World" program
+    Create the Repo
+    Add the program to the repo
+    Checkpoint 1
+
+GOAL: CHECK THE STATUS OF THE REPO
+    Question 1: What output do you see from the above command?
+
+GOAL: MONITOR THE STATE OF THE WORKING DIRECTORY
+    Change the "Hello, World" program
+    Check the status
+    Question 2: What output do you now see when typing the above command?
+
+GOAL: STAGE CHANGES FOR LATER COMMITS
+    Add Changes
+    Question 3: After staging changes with the "git add" command, 
+    what output do you see when checking the status of the working directory?
+
+STAGING AND COMMITTING
+    Goal: Commit changes to the repo
+    check the status
+    Question 4: After checking the status a final time, what output do you see?
+    Goal: learn that git works with changes not files
+    First Change: Allow a default name
+    Add this Change
+    Second change: Add a comment
+    Check the current status
+    Committing
+    Add the Second Change
+    Commit the Second Change
+    Checkpoint 2
+    Goal: View the history of the project
+    One Line Histories
+    Controlling which entries are displayed
+    Getting Fancy
+    The Ultimate Log Format
+    Goal: Setup aliases and shortcuts for git commands
+    Common Aliases
+    Define the hist alias in your .gitconfig file
+    'Type' and 'Dump'
+    Goal: Checkout any previous snapshot into the working directory
+    Get the hashes for previous versions
+    Question 5: Type cat Hello.java. What output do you see?
+    Return the latest version in the master branch
+

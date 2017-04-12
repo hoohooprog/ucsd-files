@@ -1,0 +1,31 @@
+public static void insertionSort(int numbers [], int numbersSize){
+    int i=0;
+    int j=0;
+    int temp=0;    // temp variable for swap
+
+    // for all the elements in array
+    for (i=1; i<numbersSize; ++i){
+        
+        // let j be index 1
+        j=i;
+
+        // insert numbers[i] into sorted part
+        // stopping once numbers[i] is less than previous
+        // element or reached index 0
+        while(j>0 && numbers[j] < numbers[j-1]){
+
+                //Swap numbers[j] and numbers[j-1]
+                // use temp to store the number I wanna swap
+                temp = numbers[j];
+                numbers[j] = numbers[j-1];
+                numbers[j-1] = temp;
+                --j;
+
+        }
+    }
+
+takes approx N times to insert the next element into the sorted part of the array.
+worse case comparison is n^2
+best case is N
+best of elementary sorts, twice as fast as bubble and somewhat faster than selection
+often used as the final stage of more sophisticated sorts(eg quicksort).

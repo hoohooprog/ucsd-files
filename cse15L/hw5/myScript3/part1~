@@ -1,0 +1,24 @@
+1. $ git pull
+
+2. 
+   // inspect code first, get origin from remote
+   $ git fetch origin
+   // see the commits that happened recently on the "master"
+   // branch of the remote called "origin"
+   $ git log origin/master
+   // if decide to integrate changes into working copy 
+   // download new commits and directly integrates into
+   // working copy; combination of "fetch"+"merge"
+   $ git pull
+
+3. False
+
+4. False
+
+5. Yes, but Danny can only see the changes that Charly did
+   on local repo because "git pull" is a combination of "fetch+merge".
+   Thus Danny updated his local with Charly's new code and can see what has
+   changed.
+
+6(a). ".gitignore" file in the root folder of project;
+ (b).     type "*.class"

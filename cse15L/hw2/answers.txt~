@@ -1,0 +1,32 @@
+1. After changing the file permissions from "--xr-xrw-" 
+   to issuing the command "chmod ug+rw temp",
+   both user and group will gain the ability to read and write files.
+   Hence, users can read, write, and execute; group can read, write and execute
+   ; others can read and write.
+
+2. "chmod 421 temp" means that user gives user access to read only; user
+   gives group access to write only; user gives others access to execute.
+
+3. For find to be case-sensitive we need to type the command 'find . -name "*.java"'.
+
+4. No. 127 means that the command is not found.
+
+5. less
+
+6. the letter 'd'.
+
+7. chmod u+x hello.sh
+
+8. The folder temp will appear at the home directory.
+
+9. to undo "tar cvf Lab2.tar Lab2", write "tar xvf Lab2.tar".
+   to undo "gzip -r Lab2", write "gunzip -r Lab2".
+
+10. gzip compresses individual files while tar is needed to compress
+    an entire folder before using gzip.
+
+11. "echo" command echo the string(s) to standard output. In "$echo cat", the
+    string "cat" is being output and displayed on the command line interface.
+    "cat" command concatenate file(s), or standard input, to standard output;
+    therefore, "cat echo" outputs "cat: echo: No such file or directory" because echo
+    is not a file.

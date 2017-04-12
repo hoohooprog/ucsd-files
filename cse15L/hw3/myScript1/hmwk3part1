@@ -1,0 +1,7 @@
+1. type "break main".
+2. type "stop at hw0:32"
+3. delete the fourth line in FileA to match FileB
+4. a. line 6 b. line 1
+5. a = 1
+6. a. absolute b. absolute c.relative
+7. a. cd b. pwd

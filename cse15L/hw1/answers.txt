@@ -1,0 +1,29 @@
+1. By typing e, we move the cursor to the letter e. 
+   By typing E, we move the cursor to the special character ";".
+
+2. To delete the next 4 words on the line after the cursor, 
+   make sure that the cursor is on the 1st letter of the 1st word
+   or on the whitespace before the word, and type "d4e" in normal mode.
+
+3. One: file1.txt
+   Two: file3.txt, file4.txt, file5.txt
+
+4. "mv ./One/file2.txt ./Two/file5.txt"
+
+5. the unix command to find out what sed is, is "man sed".
+
+6. "ls -1"
+
+7. cd "../"
+
+8. "mv ./hw1/change_me ./hw1/permanent"
+
+9. "fido" is not an acceptable password because it is a name and thus
+   easy for hackers to crack. 
+   As a password has to be secure, it should ideally contain a combination
+   of numbers, uppercase and lowercase letters, and punctuation charactes.
+   "fido" does not contain any of the description above and it is furthermore a name
+   for a pet.
+
+10. type 'cshs' in terminal followed by your password and the absolute pathname of the shell
+    eg "/bin/tcsh" when prompted.
