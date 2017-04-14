@@ -1,0 +1,16 @@
+1. What data structures are.
+https://en.wikipedia.org/wiki/Data_structure
+2. Why selecting the right data structure is important
+3. When to use a particular type of data structure
+4. How the most common data structures are implemented in code and in memory
+5. how object-orientation can facilitate good program design.
+
+When dealing with data, need to know how and how long will it take to:
+1) Insert new item
+2) Delete new item
+3) Access an item
+4) Search for an item
+5) Iterate through items
+6)*Sort
+
+Lect2: JUnit Testing, Abstraction, interface

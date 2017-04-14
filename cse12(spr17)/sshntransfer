@@ -1,0 +1,3 @@
+ssh -X cs12wamf@ieng6.ucsd.edu
+
+scp (r) cs12wamf@ieng6.ucsd.edu:/full/remote/dir /full/home/dir/to/file

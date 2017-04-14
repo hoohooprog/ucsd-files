@@ -1,0 +1,26 @@
+The Gamma button would be Selection sort because not only does
+the number of comparisons quadtruple after n doubles in size,
+the number of comparisons is approximately squared the number of n.
+In comparison Alpha and Beta do not have the number of comparisons
+that is squared of n. Furthermore, it is the slowest among all the buttons, highlighting its time complexity.
+
+Since both Alpha and Beta are O(n^2) but since Beta takes lesser
+time to finish running at increased number of elements, Beta would be Insertion sort
+while Alpha would be bubble sort. It is further shown that they are Insertion and Bubble when I do almost sort;
+Alpha and Beta were faster than epsilon and zeta.
+
+Since both epsilon and zeta are the fastest when randomized, I take them
+to be either quicksort or mergesort. Since zeta has higher movements
+and slightly faster than epsilon, I believe that zeta is quicksort and epsilon is mergesort;
+because mergesort requires less comparison as it's a divide and conquer algorithm, it splits array/list into single
+elements before joining them together by comparison while quicksort is a in-place algorithm, thus quicksort has 
+to use more comparison.
+It also explains why Epsilon and zeta are mergesort and quicksort respectively, because it is slower
+than both alpha and beta during almost sort.
+
+
+Therefore by process of elimination, Delta is checksort
+
+
+
+

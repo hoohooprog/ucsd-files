@@ -1,0 +1,154 @@
+
+public E next() throws NoSuchElementException {
+	
+	if(nelems==0)
+		throw new NoSuchElementException;
+		
+	left = right;
+	right = right.getNext();
+	index = (index+1)%nelems;
+	return left.getElement();
+}
+
+//******************************************************
+
+public E findMode() {
+	if(nelems==0)
+		return null;
+		
+	E modeSoFar;
+	int maxSoFar = 0;
+	
+	E prev = next();
+	E current;
+	int counter = 1;
+	
+	E firstItem = prev;
+	int firstItemCount = 1;
+	
+	for(int i=0; i<nelems-1; i++) {
+		current = next();
+		
+		if(current.equals(firstItem))
+			firstItemCount++;
+			
+		if(prev.equals(current)) {
+			counter++;
+		} else {
+			if(counter > maxSoFar) {
+				maxSoFar = counter;
+				modeSoFar = prev;
+			}
+			counter = 1;
+		}
+		prev = current;
+	}
+	
+	if(firstItemCount > modeSoFar)
+		return firstItem;
+	else
+		return modeSoFar;
+}
+
+//******************************************************
+
+public void remove( E e ) throws NullPointerException, NoSuchElementException {
+	
+	if(e==null)
+		throw new NullPointerException();
+		
+	int numRemoved = 0;
+		
+	for(int i=0; i<nelems; i++) {
+		
+		if(right.getElement().equals(e)) {
+			left.setNext(right.getNext());
+			right = right.getNext();
+			numRemoved++;
+		} else
+			next();
+	}
+	
+	if(numRemoved==0)
+		throw new NoSuchElementException();
+		
+	nelems-=numRemoved;
+}
+
+//******************************************************
+
+public int removeDuplicates() {
+	
+	E prev = next();
+	E current;
+	
+	int counter = 0;
+	
+	for(int i=0; i<nelems-1; i++) {
+		if(right.getElement().equals(prev)) {
+			left.setNext(right.getNext());
+			right = right.getNext();
+			counter++;
+		} else {
+			prev = next();
+		}
+	}
+	
+	nelems-=counter;
+	return counter;
+}
+
+//******************************************************
+
+public int numbersInRange(int a, int b) throws IndexOutOfBoundsException {
+	if(a>b)
+		throw new IndexOutOfBoundsException();
+		
+	E temp;
+	int counter = 0;
+	for(int i=0; i<nelems; i++) {
+		temp = next();
+		if(temp.getElement() >=a && temp.getElement() <=b)
+			counter++;
+	}
+			
+	return counter;
+}
+
+//******************************************************
+
+public int countDistinctElements() {
+	if(nelems==0 || nelems==1)
+		return nelems;
+		
+	E prev = next(); E current;
+	int counter = 0;
+	
+	for(int i=0; i<nelems-1; i++) {
+		current = next();
+		if(!current.equals(prev))
+			counter++;	
+		prev = current;
+	}
+	return counter;
+}
+
+//******************************************************
+
+public void add( E e ) throws NullPointerException {
+	if(e==null)
+		throw new NullPointerException();
+		
+	for(int i=0; i<nelems; i++) {
+		
+		if(left.getElement()<=e && right.getElement()>=e) {
+			Node newNode = new Node(e);
+			left.setNext(newNode);
+			newNode.setNext(right);
+			left = left.getNext();
+			nelems++;
+			break;
+		}
+		next();
+	}
+}
