@@ -50,7 +50,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 		Node next;
 
 		
-	   /**
+	       /**
 		* Purpose: creates a simpleton Node to store element. Node doesnt
 		* points to any other nodes.
 		* @param element of any type that user wants to store
@@ -161,6 +161,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 		} 
 	}
 
+
 	/**
 	 * Purpose of this class is to implement a Iterator to
 	 * iterate through the class so it is more convenient to traverse
@@ -173,7 +174,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 	 * @author Jingyi Tay
 	 * @version 1.0
 	 * @since 26 January, 2017
-     */ 
+         */ 
 	protected class MyListIterator implements ListIterator<E> {
 
 		/**
@@ -182,8 +183,10 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 		 * if false, iterator is moving backwards.
 		 * 
 		 * canRemove stores boolean value: if true, iterator will remove the 
-		 * left node if Forward is true, else, the iterator will remove the 
-		 * right node if Forward is false.
+		 * left node if Forward is true(the element returned by most recent
+                 * call to next.
+                 * , else, the iterator will remove the right node if Forward is false.
+                 *(most recent call to previous)
 		 * 
 		 * Node objects, left and right, points to the dummy header node 
 		 * and tailer nodes in the beginning if list is empty; if not empty,
@@ -355,10 +358,10 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 		
 		/**
 		 * Returns the index of the element that would be returned by a 
-		 * subsequent call to next(). (Returns list size if the list iterator
-		 * is at the end of the list.)
-		 * @return the index of the element if next method is called; returns
-		 * list size if at end of list.
+		 * subsequent call to next(). (Returns list size if the list 
+                 * iterator is at the end of the list.)
+		 * @return the index of the element if next method is called; 
+                 * returns list size if at end of list.
 		 */
 		@Override
 		public int nextIndex()
@@ -366,15 +369,27 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 			int storeIndex;
 			
 			// if there is no next element, store size of
-			// list in local variable storeIndex and return the value
-			// to method call; else returns the next index.
+			// list in local variable storeIndex and return the 
+                        // value to method call; else returns the next index.
 			if (hasNext() == false) {
 				storeIndex = size();
 			}
 			else {
+                            if (forward == true){
+                                // index returned to LL is current index because
+                                // iterator indexes dummy.
 				storeIndex = index;
+                            }
+                            else{
+                                // index returned to LL is left pointer's index
+                                // which is iterator's index - 1 as LL does not
+                                // count dummy node.
+                                storeIndex -= index;
+                            }
 			}
-			return storeIndex; 
+
+			return storeIndex;
+ 
 		}
 		
 		
