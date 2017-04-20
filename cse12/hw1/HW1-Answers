@@ -1,5 +1,0 @@
-- The command line used to create the javadoc documentation in HW1
-  is "javadoc -d ~/Documents/cse12/javadocgen/Stats.html -author 
-  -version Stats.java".
-- The command-line flags used to create author and version entries are
-  -author and -version
