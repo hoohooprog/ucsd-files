@@ -1,0 +1,13 @@
+package HW3;
+import java.util.*;
+
+public class Complexity {
+
+	LinkedList LL = new LinkedList();
+	int intArr[] = new int[10000];
+	
+	int main(){
+		
+	}
+	
+}

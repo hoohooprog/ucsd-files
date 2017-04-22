@@ -1,0 +1,51 @@
+package HW3;
+import java.util.*;
+
+public class Complexity {
+	
+	static int ArrSizes[] = { 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000};
+	
+	// initialize random num generator
+    static Random rand = new Random();
+    
+    
+	
+	void RemoveAllFront(int arr[]){
+		int i=0;
+		
+		for (i=0; i<arr.length; i++){
+			// push elements to left
+			//starting from 1 to 0
+			arr[i] = arr[i+1];
+		}
+		
+	}
+	
+	void RemoveAllFront(LinkedList LL){
+		// removes and shifts elements to left
+		LL.remove(1);
+	}
+	
+	public static void main(String [] args){
+		
+		LinkedList<Integer> LL = new LinkedList();
+		int intArr[];
+		
+		// add elements into both LL and Array
+		for (int i=0; i<ArrSizes.length; i++){
+			
+			LL.add(rand.nextInt());
+			
+		}
+		
+	
+		// remove 1st element of both LL and Array
+		for (int i=0; i<ArrSizes.length; i++){
+			
+			
+			
+		}
+		
+	}
+	
+}
