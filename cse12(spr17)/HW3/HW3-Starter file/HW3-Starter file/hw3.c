@@ -24,23 +24,38 @@ int linear_search(int[], int, int);
  */
 int main() {
   int location; //you will need more variables
-  
+  int UserInput;  
+  int numInput;
+  int searchNum;
+
   printf("Enter the number of elements that will be in the array\n");
   
   /* TODO: use scanf to get an input (size of the array) from a user */
+  scanf("%d", &UserInput);
  
-  printf("Enter %d integers\n", /* TODO */);
-  
+  int array[UserInput];
+  printf("Enter %d integers\n", UserInput);
+  getchar();  
+
   /* TODO: Now prompt for the numbers and add them to an array */
-  
+  for (int i=0; i<UserInput; i++){
+    
+    numInput = getchar() - '0';
+    getchar();
+    array[i] = numInput;
+  }
+ 
   printf("Enter the element to be searched\n");
   /* TODO: use scanf to get the element */
-  
-  location = linear_search(/* TODO */);
-  if(/* TODO */)
+  scanf("%d", &searchNum); 
+ 
+  location = linear_search(array, UserInput, searchNum);
+  if(!location){
 	printf("Element not found.\n");
-  else
-  	printf("Element found at location = %d\n", /* TODO */);
+  }
+  else{
+  	printf("Element found at location = %d\n",location );
+  }
   return 0;
 }
  
@@ -56,4 +71,29 @@ int main() {
  */
 int linear_search(int a[], int n, int ele) {
   // TODO
+  int location=0;
+  int i;
+  for (i=0; i<n; i++){
+    if (ele == a[i]){
+      location = i; 
+    }
+  }
+  
+  if (location != 0){
+  
+    location +=1;
+
+  }
+  else{
+    location = 0;
+  }
+  return location;
+
 }
+
+
+
+
+
+
+
