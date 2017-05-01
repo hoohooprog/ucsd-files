@@ -1,0 +1,105 @@
+package HW3;
+import java.util.*;
+
+public class Complexity {
+	
+	static int ArrSizes[] = { 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000};
+	final static int REPEATDELETION = 10000;
+	
+	// initialize random num generator
+    static Random rand = new Random();
+    
+    
+	
+	static void RemoveAllFront(int arr[]){
+		int i=0;
+		
+		for (i=0; i<arr.length; i++){
+			// push elements to left
+			//starting from 1 to 0
+			if ( i != (arr.length-1)){
+			
+				arr[i] = arr[i+1];
+			}
+		}
+		
+	}
+	
+	static void RemoveAllFront(LinkedList LL){
+		// removes and shifts elements to left
+		LL.remove(1);
+	}
+	
+	public static void main(String [] args){
+		
+		LinkedList<Integer> LL = new LinkedList<Integer>();
+		int intArr[];
+		long AverageForIRun=0;
+		
+		int i;
+		
+		// test elements of both LL and Array
+		// get test results by using each of the sizes by iteration
+		for (i=0; i<ArrSizes.length; i++){
+			
+			ArrayList<Long> Time4IRun4Arr = new ArrayList();
+			ArrayList<Long> Time4IRun4LL = new ArrayList();
+			
+			// intArr references new array for each length
+			intArr = new int[ArrSizes[i]];
+			
+			// loop stores random number for each LL and array
+			// for particular size
+			for (int j=0; j<ArrSizes[i]; j++){
+				
+				LL.add(rand.nextInt());
+				intArr[j] = rand.nextInt();
+					
+			}
+			
+			for (int k=0; k<REPEATDELETION; k++ ){
+			    //remove 1st element of each data struct
+				long startTime = System.nanoTime();
+			    RemoveAllFront(LL);
+			    long stopTime = System.nanoTime();
+			    long estimatedTime = stopTime - startTime;
+			    
+			    // store time taken into LList
+			    Time4IRun4LL.add(estimatedTime);
+			    
+			    startTime = System.nanoTime();
+			    RemoveAllFront(intArr);
+			    stopTime = System.nanoTime();
+			    estimatedTime = stopTime - startTime;
+			    
+			    // store time taken into array
+			    Time4IRun4Arr.add(estimatedTime);
+			}
+			
+			//print out the averages of time for each data struct
+			for (int l=0; i<Time4IRun4LL.size(); i++){
+			
+				AverageForIRun += Time4IRun4LL.get(i);
+				
+			}
+			
+			AverageForIRun /= Time4IRun4LL.size();
+			
+			System.out.println("time taken for " + i +
+					"run for LL is: "+ AverageForIRun );
+			
+			for (int l=0; i<Time4IRun4LL.size(); i++){
+				
+				AverageForIRun += Time4IRun4Arr.get(i);
+				
+			}
+			
+			AverageForIRun /= Time4IRun4Arr.size();
+			
+			System.out.println("time taken for " + i +
+					"run for Array is: "+ AverageForIRun );
+		}
+		
+	}
+	
+}

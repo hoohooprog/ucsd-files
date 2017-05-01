@@ -1,0 +1,23 @@
+package HW3;
+import java.util.*;
+
+public class Complexity {
+
+	LinkedList LL = new LinkedList();
+	int intArr[] = new int[10000];
+	
+	void RemoveAllFront(int arr[]){
+		
+		
+	}
+	
+	void RemoveAllFront(LinkedList LL){
+		// removes and shifts elements to left
+		LL.remove(1);
+	}
+	
+	public static void main(String [] args){
+		
+	}
+	
+}
