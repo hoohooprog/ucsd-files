@@ -1,0 +1,69 @@
+/*
+ * Function prototype: int main()
+ * Description: Main driver function.
+ * Parameters: None.
+ * Side Effects: Read from stdin and print to stdout
+ * Error Conditions: None.
+ * Return Value: 0 indicating successful termination
+ */
+#include <stdio.h>
+void bubbleSort(int[], int);
+
+int main(){
+    
+    // to store the size of array
+    int UserInput; 
+    int numInput;
+
+    int i;
+
+    printf("Enter the number of elements that will be in the array\n");
+  
+    /* TODO: use scanf to get an input (size of the array) from a user */
+    scanf("%d", &UserInput);
+
+    int arr[UserInput];
+
+    printf("Enter %d integers\n", UserInput);
+    
+    for ( i=0; i< UserInput; i++){
+        scanf("%d", &numInput); 
+        arr[i] = numInput;
+    }
+
+    bubbleSort(arr, UserInput);
+
+    printf("The sorted array is: \n");
+    
+    for (i=0; i<UserInput; i++){
+        printf("%d\n", arr[i]);
+    }
+
+    return 0;
+}
+
+void bubbleSort(int arr[], int arrLen){
+
+    int i;
+    int len = arrLen;
+    int tempvar;
+
+    // len represents the unsorted cond until no var is swapped
+    // then len = newn = 0
+    while ( len != 0 ){
+        // newn is var to save the last index which needs to 
+        // be swapped
+        int newn = 0;
+        for ( i=1; i < len; i++ ){
+            if (arr[i-1] > arr[i]){
+                tempvar = arr[i];
+                arr[i] = arr[i-1];
+                arr[i-1] = tempvar;
+                newn = i;
+            }
+        }
+        len = newn;
+    }
+}
+
+

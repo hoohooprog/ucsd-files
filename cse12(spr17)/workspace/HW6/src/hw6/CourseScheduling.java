@@ -1,0 +1,256 @@
+package hw6;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+public class CourseScheduling {
+	
+	public static List<Course> courseList = new LinkedList<>();
+	public static List<Student> studentList = new LinkedList<>();
+	
+	public static void populateCourseandStudents(String fname) {
+		File file = new File(fname);
+		try {
+			Scanner scanner = new Scanner(file);
+			scanner.nextLine();
+			boolean loadCourse = true;
+			while(scanner.hasNextLine()) {
+				String nextLine = scanner.nextLine();
+				if(nextLine.isEmpty()) {
+					loadCourse = false;
+					scanner.nextLine();
+					continue;
+				}
+				Scanner wordscan = new Scanner(nextLine);
+				if(loadCourse) {
+					String id = wordscan.next();
+					String cname = wordscan.next();
+					int capacity = wordscan.nextInt();
+					Course course = new Course(cname,id,capacity);
+					courseList.add(course);
+				} else {
+					String sname = wordscan.next();
+					String pid = wordscan.next();
+					int coins = wordscan.nextInt();
+					Student student = new Student(pid,sname,coins);
+					studentList.add(student);
+				}
+				wordscan.close();
+			}
+			scanner.close();
+			
+		} catch(FileNotFoundException e) {
+			
+		}
+		
+	}
+	
+	public static void print(Student s, Course c, int coins, boolean enroll) {
+		if(enroll)
+			System.out.println("Enrolling "+ s.toString() + " to Course " + 
+					c.toString() + " with coins " + coins);
+		else
+			System.out.println("Waitlisting " + s.toString() + " to Course " + 
+					c.toString() + " with coins " + coins);
+	}
+	
+	public static void printFail(Student s, Course c, boolean enroll) {
+		if(enroll)
+			System.out.println(s.toString() + " is already enrolled in Course "
+					+ c.toString());
+		else
+			System.out.println( s.toString() 
+					+ " is already waitlisted in Course "
+					+ "	" + c.toString());
+	}
+	
+	public static void printCapacity(Course c) {
+		System.out.println(c.toString() + 
+		"has already reached maximum capacity. There are no more seats left");
+	}
+	
+	public static void printNoCoins(Student s, Course c) {
+		System.out.println("Insufficient course coins. Cannot waitlist " + 
+				s.toString() + " to " + c.toString());
+	}
+	
+	public static void generateOutput() {
+		
+		System.out.println("\n\n########COURSE INFORMATION######");
+		ListIterator<Course> iter = courseList.listIterator();
+		while(iter.hasNext()) {
+			Course temp = iter.next();
+			System.out.println(temp.getCourseCode()+"  "+ 
+			temp.getCourseName());
+			System.out.println("\tRoster: "+temp.getCourseRoster());
+		}
+		
+		System.out.println("\n\n########STUDENT INFORMATION######");
+		ListIterator<Student> iterS = studentList.listIterator();
+		while(iterS.hasNext()) {
+			Student temp = iterS.next();
+			System.out.println(temp.toString());
+			System.out.println("\t Enrolled courses: " + 
+			temp.getmyEnrolledCourses());
+			System.out.println("\t Waitlisted courses: " + 
+			temp.getmyWaitlist());
+		}
+		
+		
+	}
+	
+	
+	//**********************YOUR WORK STARTS HERE*****************************
+	/**
+	 * Returns a reference to the Course object whose courseCode is code
+	 * @param code Course code of the Course to be returned
+	 * @return Course Course with the course code passed as a parameter
+	 */
+	public static Course getCourse(String code) {
+		ListIterator<Course> iter = courseList.listIterator();
+		Course storeCourse = null;
+		
+		storeCourse = iter.next();
+		    
+		if (storeCourse.getCourseCode().equals(code)){
+			return storeCourse;
+		}
+		else{
+		    while (iter.hasNext()){
+			    if (storeCourse.getCourseCode() == code){
+				
+			        return storeCourse;
+			    }
+			    else{
+				    storeCourse = iter.next();
+				    
+			    }
+		    }
+		}
+		
+		return storeCourse;
+	}
+	
+	/**
+	 * Returns a reference to the Student object whose StudentID is pid
+	 * @param pid  StudentID of the Student to be returned
+	 * @return Student student with the id passed as a parameter
+	 */
+	public static Student getStudent(String pid) {
+		ListIterator<Student> iter = studentList.listIterator();
+		
+		Student storeStudent = iter.next();
+		
+		if(storeStudent.getStudentID().equals(pid)){
+			return storeStudent;
+		}
+		else{
+		    while (iter.hasNext()){
+			    if (storeStudent.getStudentID().equals(pid)){
+				    return storeStudent;
+			    }
+			    else{
+				    storeStudent = iter.next();
+			    }
+			
+		    }
+		}
+		return storeStudent;
+	}
+	
+	public static void main(String[] args) {
+		populateCourseandStudents("Information.txt");
+		File file = new File( "Input1.txt");
+		
+		try{
+			Scanner scLine = new Scanner(file);	//scan lines in file
+			System.out.println("####START COURSE SCHEDULING####\n");
+			while (scLine.hasNextLine()) {//if the file has next line
+				Scanner scWord = new Scanner(scLine.nextLine());
+				String property;
+				String strArr[];
+				Student currStudent;
+				Course currCourse;
+				
+		        if(scWord.hasNext()){//if the file has next word
+		        	property = scWord.next();
+		        }else break;
+		        if(property.equals("register")){
+		        	
+		        	// add a new student to the course list
+		        	// store next word for id 
+		        	if(scWord.hasNext()){//if the file has next word
+			        	property = property.concat(" " + scWord.next());
+		        	}
+		        	// store next word for course name
+		        	if(scWord.hasNext()){//if the file has next word
+			        	property = property.concat(" " + scWord.next());
+		        	}	
+		        	// store num of coins student gives for the course
+		        	if(scWord.hasNext()){
+			        	property = property.concat(" " + scWord.next());
+		        	}
+		        	
+		        	
+		        	strArr = property.split(" ");
+		        	
+		        	//get student
+		        	currStudent = getStudent(strArr[1]);
+		        	currCourse = getCourse(strArr[2]);
+	
+		        	//perform course add student, student add etc
+		        	//output what needs to be done 
+		        	/*
+		        	   Waitlisting Marina(A65545) to Course CSE12 with coins 20
+					   Waitlisting Don(A76548) to Course CSE11 with coins 45
+					   Waitlisting Pooja(A11111) to Course CSE12 with coins 40
+					   Waitlisting Max(A55555) to Course CSE11 with coins 40
+					   Waitlisting Haoran(A12345) to Course CSE12 with coins 15
+		        	 */
+		        	print(currStudent,currCourse
+		        			,Integer.parseInt(strArr[3]), false);
+		        	
+		        	currCourse.addToWaitlist(new Registration(currStudent,
+		        			currCourse, 
+		        			Integer.parseInt(strArr[3])));
+		        	currStudent.waitlistCourse(currCourse);
+		        	 
+		        	
+		        }else if(property.equals("enroll")){
+		        	//process registrations in the waitlist
+		        	System.out.println("\n####STARTING BATCH ENROLLMENT####");
+		        	
+		        	// store the number of enrollment in property
+		        	property = scWord.next();
+		        	
+		        	// iterate through classes based on some defined order
+		        	for ( int i=0; i<Integer.parseInt(property); i++){
+		        		
+		        		for (int j=0; j<courseList.size(); j++){
+		        			
+		        			System.out.println("The " + i + " person w most coins for class " + j +
+		        					" " + courseList.get(j).waitlistQueue.peek() );
+		        		}
+		        	}
+		        			        	
+		        	
+		        	
+		        	System.out.println("####ENDING BATCH ENROLLMENT####\n");
+		        }else break;
+		        scWord.close();
+		    }
+			scLine.close();
+			System.out.println("\n####END COURSE SCHEDULING####");
+		}
+		catch(FileNotFoundException e){
+			System.err.println("Failed to open "+file);
+			System.exit(1);
+		}
+		
+		generateOutput();
+	}//end of main method
+}
