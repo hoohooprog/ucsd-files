@@ -9,10 +9,18 @@ cs12
 	leave a day(1/2 day) to debug/comment PA
 	summarize topics/concepts gone through weekly
 	tools(zybooks, youtube, google, slides)
+	
+	pa7 - part1(BSTree) due mon(22May): BSTNode class have 11 methods, 
+				    BSTree class have 9 methods(MUST IMPLEMENT 5 methods of the BSTree class namely: getRoot, getSize, insert, findKey,
+				    insertInformation)
+	      			    , BST iterator class have 3 methods
+	    - part2(SearchEngine) due thurs(25may): 3 parts + part3(extra credit)-4parts
 review topics
 
+math 109:
+hw7 - 1a-f, 2a-b, 3, CP 4
 
-
+healthcare
 
 
 
@@ -110,6 +118,8 @@ cs12:1340-1430
 1531-1700: cs12 (plots)
 1Hr cs12 get char from array
 1700 - 3rd meal
+2000 - 4th meal
+2300 - final meal
 
 regex,python lookup (30mins)
 
@@ -139,19 +149,31 @@ brunch 1045
 wk 4 ( weds)
 math 109 MT, richie kotzen
 
-wk 5 
-<<<<<<< HEAD
-5/4(thurs): 
-sent singpass pw to home mail(4 work days)
+wk 5
+5/1:
+breakfast - 930
+lunch - 1230
+dinner - 1830
+supper1(protein-based) - 2130
+supper2(light carb-based) - 1230
+
+5/3(weds)
+cs12MT
+
+5/4(Thurs)
+sent singpass to home mail(4 work days)
 1130: shower
 1206: brunch
 12-1300: read CS12 "more questions"
 1300-1315: googled "linkedlist interview questions"
 1315 - 1400: brief read cs20 hw2, terry crews workout vids
-1400-1446: cs20 qn1a & 1b, 2*7 pull ups 2*10 leg raises
+1400-1446: cs20 qn1a & 1b, 2*7 pull ups, 2* 10 leg raises
 1446-1523: learn binary add and complements cs20 q1c
-1523-1540: shit, 6pull ups and 8 leg raises
-1540-1629: cs20 q2
+1523-1540: shit, 6 pullups & 8 leg raises
+1540-1629: cs20 qn2
+2030-2200: LL methods; list the types of LL and methods needed
+on zybooks and other sites
+2235- :
 
 5/5(Friday):
 cs12MT
@@ -160,54 +182,17 @@ cs12MT
 1600-1640: compile cs20 qn1-3 for submission
 1min mountain climber
 4m40s youtube
-1min mountain climber
-1655-1805; 70mins; cs20 qn3c -5b
+1655-1805: 70mins; cs20 qn3c-5b
 1hr cs20 completion submit
 15mins resubmit
 
-5/16(tues)
-1300 - 1340: review homework 3 mistakes(incl circuits)
-1350 - 1425: circuits
-1445 - 1510: DNF and logical rule DNF and logical rules
-
-wk7
-5/18(thurs)
-1130 - 1230: looking at cs12 hw4 regrades and noting final exams
-git merge timelog and files 
-review hw4 test cases
-review concepts covered this wk(paper, blog)
-
-wk11
-06/12(mon)
-math 109 final exam: 0800-1059
-
-06/14(weds)
-cs12 final exam: 1500 - 1759
-
-06/15(thurs)
-cs20 final exam: 1900 - 2159
-
-3wks from wk 11(summer sess1 starts)
-=======
-5/1:
-breakfast - 930
-lunch - 1230
-dinner - 1830
-supper1(protein-based) - 2130
-supper2(light carb-based) - 1230
-
-
-5/3(weds)
-cs12MT
-
-5/4(Thurs)
-2030-2200: LL methods; list the types of LL and methods needed
-on zybooks and other sites
-2235- :
+week6
 
 5/8(Mon)
 1220 -1245: math109 q1
 1252- 1345: 26 + 14 + 8 + 10
+finish math 109 hm before supper and continue hmwk review
+2130 - : supper
 
 5/9(tues)
 1300 - 1335 : compile math 109 hm5
@@ -252,11 +237,17 @@ on zybooks and other sites
 1830 - 1920 :dinner
 1925 - 2000: sets of all fn l13 n 15
 2015 - 2100: math 109 hm6qn3(characteristic fn of power set to set of all fns)
- 
+
 finish math 109 hm before supper and continue hmwk review
 2130 - : supper
+ 
+5/16(tues)
+1300 - 1340: review homework 3 mistakes(incl circuits)
+1350 - 1425: circuits
+1445 - 1510: DNF & logical rule DNF and logical rules
 
 week7
+
 mon(may15): 1st pass 7:40pm; math 109 disc 5-550; cse20 disc 1900-1950
 Prahal Arora(CSE20 OH)- 12pm - 230pm
 Prof McKernan OH(1300-1500) 
@@ -286,4 +277,36 @@ Brivio(math109 OH) 1130-1230
 weds(may17):
 20 standard incline pushup(~15deg)
 1630 - 1815 : figuring out the algorithm of enrollment for cs12 pa6
+3
+
+5/18(thurs)
+1130 - 1230: looking @ cs12 hw4 regrades and noting final exams
+git merge timelog & files
+review hw4 test cases
+review concepts covered this wk(paper, blog)
+
+<<<<<<< HEAD
+5/20(sat)
+1600: tea break/wash face
+1830: gym/text family
+2000: dinner
+2230: supper
+
+||||||| merged common ancestors
+=======
+5/19(fri)
+math 109 lecture: cover inclusion-exclusion principle followed by chessboard application: number of 
+ 		  ways to get from 1 end to the other.
+
 >>>>>>> refs/remotes/origin/master
+wk11
+06/12(mon)
+math109 final exam: 0800-1059
+
+06/14(weds)
+cs12 final exam: 1500 - 1759
+
+06/15(thurs)
+cs20 final exam: 1900 - 2159
+
+3wks from wk 11(summer sess1 starts)

@@ -9,10 +9,18 @@ cs12
 	leave a day(1/2 day) to debug/comment PA
 	summarize topics/concepts gone through weekly
 	tools(zybooks, youtube, google, slides)
+	
+	pa7 - part1(BSTree) due mon(22May): BSTNode class have 11 methods, 
+				    BSTree class have 9 methods(MUST IMPLEMENT 5 methods of the BSTree class namely: getRoot, getSize, insert, findKey,
+				    insertInformation)
+	      			    , BST iterator class have 3 methods
+	    - part2(SearchEngine) due thurs(25may): 3 parts + part3(extra credit)-4parts
 review topics
 
+math 109:
+hw7 - 1a-f, 2a-b, 3, CP 4
 
-
+healthcare
 
 
 
@@ -277,12 +285,22 @@ git merge timelog & files
 review hw4 test cases
 review concepts covered this wk(paper, blog)
 
+5/19(fri)
+math 109 lecture: cover inclusion-exclusion principle ways to get from 1 end to other.
+
 5/20(sat)
 1600: tea break/wash face
 1830: gym/text family
 2000: dinner
 2230: supper
 
+||||||| merged common ancestors
+=======
+5/19(fri)
+math 109 lecture: cover inclusion-exclusion principle followed by chessboard application: number of 
+ 		  ways to get from 1 end to the other.
+
+>>>>>>> refs/remotes/origin/master
 wk11
 06/12(mon)
 math109 final exam: 0800-1059
