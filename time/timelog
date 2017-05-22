@@ -2,6 +2,7 @@
 scripting***
 
 breakfast+bath+walk to class: 90 mins
+zappos, DSSG, SDSC, spotify, ibm, amazon
 
 wkly assignments
 cs12
@@ -286,21 +287,46 @@ review hw4 test cases
 review concepts covered this wk(paper, blog)
 
 5/19(fri)
-math 109 lecture: cover inclusion-exclusion principle ways to get from 1 end to other.
+math 109 lecture: cover inclusion-exclusion principle followed by chessboard application: number of ways to get from 1 end to other.
 
 5/20(sat)
-1600: tea break/wash face
-1830: gym/text family
-2000: dinner
-2230: supper
+8 + 6 + 6 pullups; 11 L-sit + 8 + 12; 1m20s mountain-climber
+1400 - 1430: looking through BSTNode class, install indicator-cpufreq
+	     because eclipse crashed 
+1450 - 1551: finish checking BSTNode, checking BSTree and testing 
+1617 - 1700: tested getSize(), insert(T) and addHelper(BST, T)
+1718 - 1800: understanding insertInformation, findMoreInfo and 
+	    findMoreInformation helper. implementation is based around
+	    method signature; findMoreInfo check for null and illegal
+	    Argument and uses findMoreInformationHelper to pass the 
+	    arraylist back to insert to see if the list contains info;
 
-||||||| merged common ancestors
+	    if not, use insertinfohelper to insert info
+	    Basically, just finding and comparing keys until the right
+	    node is found, check if the list in node has the info and 
+     	    decide to add or not.
+
+1830 - 1854: tested insertInformation 
+1930 - 2030: gym - abs
+2100: dinner
+
+5/21(Sun)
+1245 - 1315 : finish math 109 qn1a), expressing the summation of 
+	      characteristic fn A
+1340 - 1413: search cardinality & hw6 for ch fn proofs & 1b) complete
+1432 - 1515 :hw7 1c)
+14 burpees, fruits n yogurt n sterilize wound, surf net for music app
+1615 - 1753: sketch of 1d), qn 3 hw7 math 109
+
+2100 - 2230: cs 12 iterator for BST, stack BSTNode
 =======
-5/19(fri)
-math 109 lecture: cover inclusion-exclusion principle followed by chessboard application: number of 
- 		  ways to get from 1 end to the other.
+wk8
+0955 : breakfast
+1000 - 1050: math 109 - continuation of ways to move across chessboard
+	     	      - discussion of combination def, pigeonhole principle
 
->>>>>>> refs/remotes/origin/master
+1300 -1412 : rewrite qn 1a-c) math109 on hand-in sheet. 
+
 wk11
 06/12(mon)
 math109 final exam: 0800-1059
