@@ -322,6 +322,7 @@ math 109 lecture: cover inclusion-exclusion principle followed by chessboard app
 =======
 wk8
 5/22
+cs12 reading quiz
 0955 : breakfast
 1000 - 1050: math 109 - continuation of ways to move across chessboard
 	     	      - discussion of combination def, pigeonhole principle
@@ -334,6 +335,25 @@ wk8
 1220 - 1300: q3a n b done
 1325 - 1400: finish qn4 
 1400 - 1450: finish math 109
+1900 - 1930: finish debug findHeight and findleaf; findHeight BST
+	     has to account for base height and empty tree
+	     final height return has to -1 to account for base height 0
+
+5/24
+0730 - 0810: gym(shoulders, abs, 7 pull ups, quad)
+0900 - 0945-reading quiz on ted
+1300 - 1440: math109 hw7q1; chessboard- fixed total,left, right steps -
+2 ways of finding the number of ways 1) choosing the number of rights from
+n total objects(decisions) and 2)recursive sum fn to get to final square
+since condition is either go right n up, only left & bottom square can get 
+to final. 
+1620 - 1640: understand prop 16.5
+1650 - 1715: understand theorem 16.6(binomial theorem) 
+	 n 16.7(describing deriving the number of ways to get arrangement
+	 by finding the number of objects 
+
+5/26: 2nd pass 1920
+reading quiz on zybooks
 
 wk11
 06/12(mon)
